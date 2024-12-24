@@ -267,6 +267,7 @@ section#contatos{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    text-align: center;
 }
 
 .service-card {
@@ -547,10 +548,12 @@ footer{
 
     .services-grid{
         padding: 0;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .projetos-grid{
         padding: 0;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .container-footer{
