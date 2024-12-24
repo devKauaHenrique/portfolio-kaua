@@ -11,13 +11,24 @@ html{
 }
 
 :root{
+    --bg-gradient: linear-gradient(to right, #2c174a 0%, #5f3281 100%);
     --primary-color: #2c174a;
     --secondary-color: #5f3281;
     --light-color: #8a629c;
+    --bg-contacts: #fff;
+    --text-contacts: #2c174a;
+    --text-color: #fff;
+}
+
+[data-theme="light"]{
+    --bg-gradient: linear-gradient(to right, #5f3281 0%, #fff 19%, #fff 42%, #fff 79%, #5f3281 100%);
+    --text-color: #2c174a;
+    --bg-contacts: #2c174a;
+    --text-contacts: #fff;
 }
 
 body{
-    background-image: linear-gradient(to right, #2c174a 0%, #5f3281 100%);
+    background-image: var(--bg-gradient);
     font-family: "Nunito", serif;
 }
 
@@ -38,7 +49,7 @@ body{
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
-    padding-inline: 7rem;
+    padding-inline: 4rem;
     align-items: center;
 }
 
@@ -91,6 +102,27 @@ body{
     background-color: var(--light-color);
 }
 
+button.btn-dark-mode{
+    background: var(--light-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+button.btn-dark-mode:hover{
+    background-color: var(--secondary-color);
+    transform: translateY(-6px);
+}
+
+svg{
+    color: var(--white);
+    width: 24px;
+    height: 24px;
+}
+
 li.link-hover{
     position: relative;
 }
@@ -128,7 +160,7 @@ section#sobre-mim .container{
 }
 
 .container h2{
-    color: white;
+    color: var(--text-color);
     font-size: 36px;
     text-align: center;
     font-family: "Orbitron", serif;
@@ -150,13 +182,13 @@ section#sobre-mim .container{
 }
 
 .about-text h1{
-    color: white;
+    color: var(--text-color);
     font-size: 28px;
     font-family: "Orbitron", serif;
 }
 
 .about-text p{
-    color: white;
+    color: var(--text-color);
     max-width: 700px;
 }
 
@@ -166,7 +198,7 @@ section#sobre-mim .container{
 }
 
 .btn-curriculo{
-    color: white;
+    color: var(--text-color);
     font-size: 18px;
     font-weight: bold;
     background-color: transparent;
@@ -187,7 +219,7 @@ section#sobre-mim .container{
 }
 
 section#contatos{
-    background-color: white;
+    background-color: var(--bg-contacts);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +237,7 @@ section#contatos{
 .contatos h2{
     font-family: "Orbitron", serif;
     font-size: 28px;
-    color: var(--primary-color);
+    color: var(--text-contacts);
 }
 
 .icons{
@@ -214,8 +246,8 @@ section#contatos{
 }
 
 .icons i{
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--text-contacts);
+    color: var(--bg-contacts);
     padding: 10px;
     border-radius: 50%;
     font-size: 28px;
@@ -242,7 +274,8 @@ section#contatos{
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background: white;
+    color: var(--text-contacts);
+    background: var(--bg-contacts);
     border-radius: 1rem;
     gap: 12px;
     box-shadow: 0 4px 6px rgba(241, 241, 241, 0.5);
@@ -272,7 +305,8 @@ section#contatos{
 
 .service-card {
     padding: 2rem;
-    background: white;
+    color: var(--text-contacts);
+    background: var(--bg-contacts);
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(241, 241, 241, 0.5);
     text-align: center;
@@ -290,7 +324,7 @@ section#contatos{
 
 .service-card i {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--text-contacts);
     margin-bottom: 1rem;
 }
 
@@ -303,7 +337,8 @@ section#contatos{
 }
 
 .projetos-card{
-    background-color: white;
+    color: var(--text-contacts);
+    background: var(--bg-contacts);
     border-radius: 1rem;
     padding: 1.5rem;
     overflow: hidden;
