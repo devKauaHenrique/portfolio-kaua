@@ -21,7 +21,7 @@ html{
 }
 
 [data-theme="light"]{
-    --bg-gradient: linear-gradient(to right, #5f3281 0%, #fff 19%, #fff 42%, #fff 79%, #5f3281 100%);
+    --bg-gradient: #fff;
     --text-color: #2c174a;
     --bg-contacts: #2c174a;
     --text-contacts: #fff;
@@ -475,6 +475,12 @@ footer{
     .hamburguer{
         display: block;
         z-index: 99;
+    }
+
+    button.btn-dark-mode{
+        position: relative;
+        bottom: 85%;
+        right: 40%;
     }
 
     .nav{
